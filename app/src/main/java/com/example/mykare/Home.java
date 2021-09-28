@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -19,6 +20,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,7 +28,7 @@ import java.util.Locale;
 
 public class Home extends AppCompatActivity {
 
-    Button btlocation;
+    Button btlocation,logout;
     TextView textView1, textView2, textView3, textView4, textView5;
     FusedLocationProviderClient fusedLocationProviderClient;
 
@@ -35,6 +37,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        logout = (Button) findViewById(R.id.logout);
         btlocation = (Button) findViewById(R.id.bt_location);
         textView1 = findViewById(R.id.text_view1);
         textView2 = findViewById(R.id.text_view2);
@@ -54,6 +57,15 @@ public class Home extends AppCompatActivity {
                     ActivityCompat.requestPermissions(Home.this,
                             new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
                 }
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
             }
         });
     }
@@ -114,4 +126,6 @@ public class Home extends AppCompatActivity {
                 }
             });
         }
+
+
 }
