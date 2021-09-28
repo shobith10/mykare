@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         uRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Home.class));
+                startActivity(new Intent(getApplicationContext(), Register.class));
             }
         });
 
