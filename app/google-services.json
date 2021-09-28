@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "990739511161",
+    "firebase_url": "https://javaandroid-b379a-default-rtdb.firebaseio.com",
+    "project_id": "javaandroid-b379a",
+    "storage_bucket": "javaandroid-b379a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990739511161:android:e373f9c72a1680cf1421a8",
+        "android_client_info": {
+          "package_name": "com.example.mykare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990739511161-negnurq88qifck1s66u5t5iebu1fuq9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqXGVMNHt6d7w_EEfOhSS2P-W3kWqMtf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990739511161-negnurq88qifck1s66u5t5iebu1fuq9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
